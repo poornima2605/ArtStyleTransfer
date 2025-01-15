@@ -1,4 +1,6 @@
-Flask==2.2.3
+flask==1.1.4
+werkzeug==1.0.1
 torch
 torchvision
 Pillow
+markupsafe==2.0.1

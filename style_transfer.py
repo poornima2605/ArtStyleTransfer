@@ -139,8 +139,3 @@ def perform_style_transfer(content_path, style_path, output_path):
     # Save the result
     filtered_image.save(output_path)
     print("Stylized image saved!")
-
-content_image_path = "./InputImage/vase.jpg"
-style_image_path = "./InputImage/greenforest.jpg"
-perform_style_transfer(content_image_path, style_image_path,
-                       "./style/ProcessedImage/output.jpg")
