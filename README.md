@@ -23,9 +23,9 @@ This repository contains a Python implementation of artistic style transfer, a t
 
 **Examples:**
 
-| Content Image                              | Style Image                                     | Processed image                                          |
-|--------------------------------------------|-------------------------------------------------|----------------------------------------------------------|
-| ![GitHub Image](./Input Images/sketch.jpg) | ![GitHub Image](./Input Images/picasso.jpg)     | ![GitHub Image](./Processed Images/sketch_picasso.jpg)   |
-| ![GitHub Image](./Input Images/sketch.jpg) | ![GitHub Image](./Input Images/sunset.jpg)      | ![GitHub Image](./Processed Images/sketch_sunset.jpg)    |
-| ![GitHub Image](./Input Images/vase.jpg)   | ![GitHub Image](./Input Images/greenforest.jpg) | ![GitHub Image](./Processed Images/vase_greenforest.jpg) |
-| ![GitHub Image](./Input Images/vase.jpg)   | ![GitHub Image](./Input Images/StarryNight.jpg) | ![GitHub Image](./Processed Images/vase_StarryNight.jpg) |
+| Content Image                           | Style Image                                  | Processed image                                        |
+|-----------------------------------------|----------------------------------------------|--------------------------------------------------------|
+| ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/picasso.jpg)   | ![GitHub Image](./ProcessedImages/sketch_picasso.jpg)  |
+| ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/sunset.jpg)    | ![GitHub Image](./ProcessedImages/sketch_sunset.jpg)   |
+| ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/greenforest.jpg) | ![GitHub Image](./ProcessedImages/vase_greenforest.jpg) |
+| ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/StarryNight.jpg) | ![GitHub Image](./ProcessedImages/vase_StarryNight.jpg) |
