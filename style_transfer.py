@@ -1,6 +1,5 @@
 import torch
 import torchvision.transforms as transforms
-import matplotlib.pyplot as plt
 
 from torchvision.utils import save_image
 from torchvision.models import vgg19
@@ -104,29 +103,44 @@ def run_style_transfer(content, style, vgg, content_weight=1e3,
     return target
 
 
-content_image_path = "./vase.jpg"
-style_image_path = "./greenforest.jpg"
-content = load_image(content_image_path)
-style = load_image(style_image_path, shape=[content.size(2), content.size(3)])
+def perform_style_transfer(content_path, style_path, output_path):
+    """
+    Perform style transfer on the content and style images and save the output.
+    Args:
+        content_path (str): Path to the content image.
+        style_path (str): Path to the style image.
+        output_path (str): Path to save the processed image.
+    """
+    # Load images
+    content_image = load_image(content_path)
+    style_image = load_image(style_path)
 
-# Load Pre-trained VGG19 Model
-vgg = vgg19(pretrained=True).features
-for param in vgg.parameters():
-    param.requires_grad_(False)
-vgg.to('cuda' if torch.cuda.is_available() else 'cpu')
+    # Load Pre-trained VGG19 Model
+    vgg = vgg19(pretrained=True).features
+    for param in vgg.parameters():
+        param.requires_grad_(False)
+    vgg.to('cuda' if torch.cuda.is_available() else 'cpu')
 
-output_image = run_style_transfer(content, style, vgg)
-image = output_image.cpu().detach().squeeze(0)
+    # Perform the style transfer (using your existing logic)
+    output_image = run_style_transfer(content_image, style_image, vgg)
 
-mean = torch.tensor([0.485, 0.456, 0.406])  
-std = torch.tensor([0.229, 0.224, 0.225])
+    image = output_image.cpu().detach().squeeze(0)
+    mean = torch.tensor([0.485, 0.456, 0.406])
+    std = torch.tensor([0.229, 0.224, 0.225])
 
-image_ori = image * std[:, None, None] + mean[:, None, None]
-image_ori1 = transforms.functional.to_pil_image(image_ori)
-image_ori1 = image_ori1.convert('RGB')
+    image_ori = image * std[:, None, None] + mean[:, None, None]
+    image_ori1 = transforms.functional.to_pil_image(image_ori)
+    image_ori1 = image_ori1.convert('RGB')
 
-filtered_image = image_ori1.filter(ImageFilter.MedianFilter(size=5))
-filtered_image = filtered_image.filter(ImageFilter.GaussianBlur(radius=0.5))
+    filtered_image = image_ori1.filter(ImageFilter.MedianFilter(size=5))
+    filtered_image = filtered_image.filter(
+        ImageFilter.GaussianBlur(radius=0.5))
 
-filtered_image.save("./vase_greenforest.jpg")
-print("Stylized image saved!")
+    # Save the result
+    save_image(filtered_image, output_path)
+    print("Stylized image saved!")
+
+content_image_path = "./InputImage/vase.jpg"
+style_image_path = "./InputImage/greenforest.jpg"
+perform_style_transfer(content_image_path, style_image_path,
+                       "./style/ProcessedImage/output.jpg")

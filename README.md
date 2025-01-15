@@ -29,3 +29,13 @@ This repository contains a Python implementation of artistic style transfer, a t
 | ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/sunset.jpg)      | ![GitHub Image](./ProcessedImages/sketch_sunset.jpg)    |
 | ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/greenforest.jpg) | ![GitHub Image](./ProcessedImages/vase_greenforest.jpg) |
 | ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/StarryNight.jpg) | ![GitHub Image](./ProcessedImages/Vase_StarryNight.jpg) |
+
+
+**How to Run:**
+
+pip install -r requirements.txt
+
+python app.py
+
+Access it at http://127.0.0.1:5000.
+
