@@ -23,9 +23,9 @@ This repository contains a Python implementation of artistic style transfer, a t
 
 **Examples:**
 
-| Content Image                           | Style Image                                  | Processed image                                        |
-|-----------------------------------------|----------------------------------------------|--------------------------------------------------------|
-| ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/picasso.jpg)   | ![GitHub Image](./ProcessedImages/sketch_picasso.jpg)  |
-| ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/sunset.jpg)    | ![GitHub Image](./ProcessedImages/sketch_sunset.jpg)   |
+| Content Image                           | Style Image                                    | Processed image                                         |
+|-----------------------------------------|------------------------------------------------|---------------------------------------------------------|
+| ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/picasso.jpg)     | ![GitHub Image](./ProcessedImages/sketch_picasso.jpg)   |
+| ![GitHub Image](./InputImages/sketch.jpg) | ![GitHub Image](./InputImages/sunset.jpg)      | ![GitHub Image](./ProcessedImages/sketch_sunset.jpg)    |
 | ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/greenforest.jpg) | ![GitHub Image](./ProcessedImages/vase_greenforest.jpg) |
-| ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/StarryNight.jpg) | ![GitHub Image](./ProcessedImages/vase_StarryNight.jpg) |
+| ![GitHub Image](./InputImages/vase.jpg) | ![GitHub Image](./InputImages/starrynight.jpg) | ![GitHub Image](./ProcessedImages/vase_starrynight.jpg) |
