@@ -137,7 +137,7 @@ def perform_style_transfer(content_path, style_path, output_path):
         ImageFilter.GaussianBlur(radius=0.5))
 
     # Save the result
-    save_image(filtered_image, output_path)
+    filtered_image.save(output_path)
     print("Stylized image saved!")
 
 content_image_path = "./InputImage/vase.jpg"
