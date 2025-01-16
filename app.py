@@ -32,7 +32,9 @@ def upload_files():
 
     # Return the processed image to the user
     return render_template('result.html',
-                           processed_image='ProcessedImage/processed.jpg')
+                           processed_image='ProcessedImage/processed.jpg',
+                           style_image='processed_image/style.jpg',
+                           processed_image='processed_image/processed.jpg')
 
 @app.route('/static/ProcessedImage/<filename>')
 def serve_image(filename):

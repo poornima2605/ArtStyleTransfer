@@ -4,9 +4,24 @@
     <title>Processed Image</title>
 </head>
 <body>
-    <h1>Styled Image</h1>
-    <img src="{{ processed_image }}" alt="Styled Image">
-    <br><br>
-    <a href="/">Go Back</a>
+    <h1>Style Transfer Result</h1>
+
+    <div>
+        <h3>Content Image</h3>
+        <img src="/static/{{ content_image }}" alt="Content Image" style="max-width:100%; height:auto;">
+    </div>
+
+    <div>
+        <h3>Style Image</h3>
+        <img src="/static/{{ style_image }}" alt="Style Image" style="max-width:100%; height:auto;">
+    </div>
+
+    <div>
+        <h3>Styled Image</h3>
+        <img src="/static/{{ processed_image }}" alt="Styled Image" style="max-width:100%; height:auto;">
+    </div>
+
+    <br>
+    <a href="/">Upload Another</a>
 </body>
 </html>
